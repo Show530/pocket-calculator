@@ -4,35 +4,39 @@
     <title>Pocket Calculator</title>
   </head>
   <body>
+    <h1>Sophia's Synchroette Calculator</h1>
     <table id="table">
       <tr>
-        <td><button>AC</button></td>
-        <td><button>+/-</button></td>
-        <td><button>%</button></td>
-        <td class="operate"><button>/</button></td>
+        <th colspan="4" id="display"></th>
       </tr>
       <tr>
-        <td><button>7</button></td>
-        <td><button>8</button></td>
-        <td><button>9</button></td>
-        <td class="operate"><button>x</button></td>
+        <td><button class="topOp" onclick="clear();">AC</button></td>
+        <td><button class="topOp" onclick="plusMinus();">+/-</button></td>
+        <td><button class="topOp" onclick="mod();">%</button></td>
+        <td><button class="operate" onclick="division();">/</button></td>
       </tr>
       <tr>
-        <td><button>4</button></td>
-        <td><button>5</button></td>
-        <td><button>6</button></td>
-        <td class="operate"><button>-</td>
+        <td><button onclick="num7();">7</button></td>
+        <td><button onclick="num8();">8</button></td>
+        <td><button onclick="num9();">9</button></td>
+        <td><button class="operate" onclick="mul();">x</button></td>
       </tr>
       <tr>
-        <td><button>1</button></td>
-        <td><button>2</button></td>
-        <td><button>3</button></td>
-        <td class="operate"><button>+</button></td>
+        <td><button onclick="num4();">4</button></td>
+        <td><button onclick="num5();">5</button></td>
+        <td><button onclick="num6();">6</button></td>
+        <td><button class="operate" onclick="subtract();">-</td>
       </tr>
       <tr>
-        <td colspan="2"><button>0</button></td>
-        <td><button>.</button></td>
-        <td class="operate"><button>=</button></td>
+        <td><button onclick="num1();">1</button></td>
+        <td><button onclick="num2();">2</button></td>
+        <td><button onclick="num3();">3</button></td>
+        <td><button class="operate" onclick="add();">+</button></td>
+      </tr>
+      <tr>
+        <td colspan="2"><button onclick="zero();">0</button></td>
+        <td><button onclick="deci();">.</button></td>
+        <td><button class="operate" onclick="equal();">=</button></td>
       </tr>
     </table>
   </body>
