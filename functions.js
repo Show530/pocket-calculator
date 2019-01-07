@@ -11,7 +11,7 @@ let value7
 */
 
 function clear() {
-  
+ 
 }
 
 function plusMinus() {
@@ -19,7 +19,7 @@ function plusMinus() {
 }
 
 function mod() {
-    
+
 }
 
 function division() {
