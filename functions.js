@@ -1,76 +1,87 @@
+//Sophia's Javascript
 
-clear() {
+/*
+let value1
+let value2
+let value3
+let value4
+let value5
+let value6
+let value7
+*/
+
+function clear() {
+  
+}
+
+function plusMinus() {
 
 }
 
-plusMinus() {
+function mod() {
+    
+}
+
+function division() {
 
 }
 
-mod() {
+function num7() {
 
 }
 
-division() {
+function num8() {
 
 }
 
-num7() {
+function num9() {
 
 }
 
-num8() {
+function mul() {
 
 }
 
-num9() {
+function num4() {
 
 }
 
-mul() {
+function num5() {
 
 }
 
-num4() {
+function num6() {
 
 }
 
-num5() {
+function subtract() {
 
 }
 
-num6() {
+function num1() {
 
 }
 
-subtract() {
+function num2() {
 
 }
 
-num1() {
+function num3() {
 
 }
 
-num2() {
+function add() {
 
 }
 
-num3() {
+function zero() {
 
 }
 
-add() {
+function deci() {
 
 }
 
-zero() {
-
-}
-
-deci() {
-
-}
-
-equal() {
+function equal() {
 
 }
