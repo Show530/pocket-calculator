@@ -1,17 +1,11 @@
-//Sophia's Javascript
 
-/*
-let value1
-let value2
-let value3
-let value4
-let value5
-let value6
-let value7
-*/
+let numbers = [];
+let p = document.getElementById("display");
 
 function clear() {
- 
+ for(let i = 0; i < numbers.length; i++) {
+    let deleted = numbers.pop;
+ }
 }
 
 function plusMinus() {
@@ -27,7 +21,8 @@ function division() {
 }
 
 function num7() {
-
+    numbers.add = 7;
+    document.getElementById("display").innerHTML = `${numbers}`;
 }
 
 function num8() {
