@@ -1,8 +1,9 @@
 
 let numbers = [];
+let afterOpNumbers = [];
 let p = document.getElementById("display");
 
-function iniClear() {
+function iniCleer() {
   document.getElementById("display").innerHTML = "0";
 }
 
@@ -39,7 +40,6 @@ function myButton(label) {
       }
  */
     }
-}
 
 function arrayToNum1() {
   let k = 0;
