@@ -1,6 +1,8 @@
 
 let numbers = [];
-let afterOpNumbers = [];
+var storeOp;
+var lastNum;
+let show;
 let p = document.getElementById("display");
 
 function iniCleer() {
@@ -23,40 +25,46 @@ function myButton(label) {
       document.getElementById("display").innerHTML = `${numbers.join("")}`;
     } 
   }
-  /*
-    else if(typeof label == 'string') {
-    // four core operators
-      if(label == "division") {
-        //code
-      }
-      else if(label == "mul") {
-        //code
-      }
-      else if(label == "subtract") {
-        //code
-      }
-      else if(label == "addition") {
-        //code
-      }
- */
-    }
+}
 
-function arrayToNum1() {
+function fourFuncs(operator) {
+  let k = arrayToNum(numbers);
+      k = k.toString();  
+  if(typeof operator == 'string') {
+      // four core operators
+        if(operator == "division") {
+          k += " / ";
+          console.log(k);
+        }
+        else if(operator == "mul") {
+          k += " * ";
+          console.log(k);
+        }
+        else if(operator == "subtract") {
+          k += " - ";
+          console.log(k);
+        }
+        else if(operator == "addition") {
+          k += " + ";
+          console.log(k);
+        }
+        storeOp = k;
+    } 
+    lastNum = k;
+}
+
+function arrayToNum() {
   let k = 0;
   let n = numbers.length;
-
+  //turns array into a number value
   for (let i = 0; i < n; i++) {
     k = 10 * k + numbers[i];
   }
-}
-
-function arrayToNum2() {
-  let h = 0;
-  let n = numbers.length;
-
+  //to clear numbers[]
   for (let i = 0; i < n; i++) {
-    h = 10 * h + numbers[i];
+    numbers.pop();
   }
+  return k;
 }
 
 //Operators
@@ -65,7 +73,7 @@ function cleer() {
 
   let l = numbers.length;
 
-  for (let i=0; i < l; i++) {
+  for (let i = 0; i < l; i++) {
     numbers.pop();
   }
 }
@@ -78,28 +86,18 @@ function mod() {
 
 }
 
-function division() {
-
-}
-
-function mul() {
-
-}
-
-
-function subtract() {
-
-}
-
-function add() {
-
-}
-
-
 function deci() {
 
 }
 
 function equal() {
+  lastNum = arrayToNum(numbers);
 
+  lastNum = lastNum.toString(); 
+  console.log(storeOp);
+  console.log(numbers);
+  console.log(lastNum);
+  storeOp += lastNum;
+  show = storeOp;
+  console.log(show);
 }
