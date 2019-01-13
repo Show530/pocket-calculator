@@ -98,6 +98,5 @@ function equal() {
   console.log(numbers);
   console.log(lastNum);
   storeOp += lastNum;
-  show = storeOp;
-  console.log(show);
+  show = storeOp;                         
 }
