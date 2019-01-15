@@ -3,6 +3,7 @@ let numbers = [];
 var storeOp;
 var lastNum;
 let show;
+let decimal = false;
 let p = document.getElementById("display");
 
 function iniCleer() {
@@ -13,7 +14,7 @@ function iniCleer() {
 
 function myButton(label) {
   if(typeof label == 'number') {
-    // number buttons 
+    // number buttons
     if(label == 0) {
       if(numbers.length >= 1 && numbers.length < 9){
         numbers.push(label);
@@ -23,33 +24,29 @@ function myButton(label) {
     else if(numbers.length < 9) {
       numbers.push(label);
       document.getElementById("display").innerHTML = `${numbers.join("")}`;
-    } 
+    }
   }
 }
 
 function fourFuncs(operator) {
   let k = arrayToNum(numbers);
-      k = k.toString();  
+      k = k.toString();
   if(typeof operator == 'string') {
       // four core operators
         if(operator == "division") {
           k += " / ";
-          console.log(k);
         }
         else if(operator == "mul") {
           k += " * ";
-          console.log(k);
         }
         else if(operator == "subtract") {
           k += " - ";
-          console.log(k);
         }
         else if(operator == "addition") {
           k += " + ";
-          console.log(k);
         }
         storeOp = k;
-    } 
+    }
     lastNum = k;
 }
 
@@ -76,10 +73,11 @@ function cleer() {
   for (let i = 0; i < l; i++) {
     numbers.pop();
   }
+  decimal = false;
 }
 
 function plusMinus() {
-  
+
 }
 
 function mod() {
@@ -87,16 +85,20 @@ function mod() {
 }
 
 function deci() {
+  if((numbers.length > 0 && numbers.length < 10) && decimal == false) {
+    numbers.push(".");
+    decimal = true;
+  }
 
 }
 
 function equal() {
   lastNum = arrayToNum(numbers);
 
-  lastNum = lastNum.toString(); 
+  lastNum = lastNum.toString();
   console.log(storeOp);
   console.log(numbers);
   console.log(lastNum);
   storeOp += lastNum;
-  show = storeOp;                         
+  show = storeOp;
 }
